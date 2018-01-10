@@ -31,5 +31,6 @@ MethodLength:
 AbcSize:
   Enabled: false
 Metrics/BlockLength:
-  Description: 'Avoid long blocks with many lines.'
+  Enabled: false
+Naming/HeredocDelimiterNaming:
   Enabled: false
