@@ -16,6 +16,6 @@ depends 'apt'
 depends 'windows'
 depends 'yum-plugin-versionlock'
 
-%w(ubuntu centos amazon redhat fedora windows).each do |os|
+%w[ubuntu centos amazon redhat fedora windows].each do |os|
   supports os
 end

@@ -41,8 +41,8 @@ windows_zipfile node['metricbeat']['windows']['base_dir'] do
 end
 
 powershell_script 'install metricbeat as service' do
-  code <<-EOH
-    cd "#{extract_folder}" 
+  code <<-EOF
+    cd "#{extract_folder}"
     &"./install-service-metricbeat.ps1"
-  EOH
+    EOF
 end
