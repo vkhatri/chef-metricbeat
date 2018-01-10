@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'metricbeat::default' do
   shared_examples_for 'metricbeat' do
     context 'all_platforms' do
-      %w(install config).each do |r|
+      %w[install config].each do |r|
         it "include recipe metricbeat::#{r}" do
           expect(chef_run).to include_recipe("metricbeat::#{r}")
         end

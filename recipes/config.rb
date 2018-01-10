@@ -22,7 +22,7 @@ file node['metricbeat']['conf_file'] do
   notifies :restart, 'service[metricbeat]' if node['metricbeat']['notify_restart'] && !node['metricbeat']['disable_service']
 end
 
-service_action = node['metricbeat']['disable_service'] ? %i[disable, stop] : %i[enable, start]
+service_action = node['metricbeat']['disable_service'] ? %i[disable stop] : %i[enable start]
 
 ruby_block 'delay metricbeat service start' do
   block do

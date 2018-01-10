@@ -30,3 +30,6 @@ MethodLength:
   Enabled: false
 AbcSize:
   Enabled: false
+Metrics/BlockLength:
+  Description: 'Avoid long blocks with many lines.'
+  Enabled: false
