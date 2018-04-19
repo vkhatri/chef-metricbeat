@@ -30,3 +30,7 @@ MethodLength:
   Enabled: false
 AbcSize:
   Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Naming/HeredocDelimiterNaming:
+  Enabled: false

@@ -23,6 +23,6 @@ default['metricbeat']['yum']['gpgkey'] = 'https://artifacts.elastic.co/GPG-KEY-e
 default['metricbeat']['yum']['action'] = :create
 
 default['metricbeat']['apt']['description'] = 'Elastic Beats Repository'
-default['metricbeat']['apt']['components'] = %w(stable main)
+default['metricbeat']['apt']['components'] = %w[stable main]
 default['metricbeat']['apt']['key'] = 'https://artifacts.elastic.co/GPG-KEY-elasticsearch'
 default['metricbeat']['apt']['action'] = :add
