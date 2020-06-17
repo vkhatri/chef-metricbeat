@@ -40,6 +40,13 @@ windows_zipfile node['metricbeat']['windows']['base_dir'] do
   not_if { ::File.exist?(extract_folder + '/install-service-metricbeat.ps1') }
 end
 
+powershell_script 'Unzip Metricbeat' do
+  code <<-EOH
+    Expand-Archive '#{package_file}' '#{extract_folder}'
+  EOH
+  not_if { ::File.exist?(extract_folder + '/install-service-metricbeat.ps1') }
+end
+
 powershell_script 'install metricbeat as service' do
   code <<-EOF
     cd "#{extract_folder}"
